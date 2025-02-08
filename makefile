@@ -1,2 +1,2 @@
-exec: main.cpp
+build: main.cpp
 	g++ -o exec main.cpp
