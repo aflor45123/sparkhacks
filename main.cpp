@@ -2,15 +2,14 @@
 #include <iostream> 
 #include <vector> 
 #include "Creature.h"
-#include "creature.h"
 
 using namespace std; 
 
-vector<Creature> invasives;
+Creature invasives[10];
 
 void instantiate(){
-    invasives.push_back(Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant."));
-    invasives.push_back(Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens."))
+    invasives[0] = Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant.");
+    invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens.");
 }
 
 void questionaire() {
@@ -35,6 +34,6 @@ int main(){
         }
     }
     invasives[bestMatch].as_string();
-    //cout << questionaire() << endl;
+    invasives[0].as_string();
     return 0;
 }
