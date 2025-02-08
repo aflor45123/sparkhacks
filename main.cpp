@@ -24,13 +24,17 @@ void instantiate(){
     invasives[9] = Creature("", 100, "", "");
 }
 
+// AI collects information from user to best suit their interests
 void questionaire() {
     vector<string> questions = {"Do you garden or farm?", "Do you spend time by the water?", 
         "Do you spend time by the forest?", "Are you a morning person or a night person?",
         "Are you okay with touching/killing bugs?", "Are you okay with touching/kill fish?"};
     vector<char> responses;
 
+    vector<string> priorities;
 
+
+    // This for loop asks questions
     for (int i = 0; i < questions.size(); ++i) {
         char answer;
 
@@ -41,9 +45,20 @@ void questionaire() {
         responses.push_back(answer);
     }
 
-    for (int i = 0; i < questions.size(); ++i) {
-        cout << responses.at(i) << " ";
+    // This for loop organizes the relevance of each species
+    for (int i = 0; i < responses.size(); ++i) {
+        if (i == 0) {
+            if (responses.at(i) == 'y') {
+                continue;
+            }
+            else {
+                continue;
+            }
+        }
+        
     }
+
+    
 
     
 
