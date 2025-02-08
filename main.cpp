@@ -1,12 +1,14 @@
 #include <stdlib.h>
 #include <iostream> 
-//#include <creature.h>
+#include "creature.h"
 
 using namespace std; 
 
 int main(){
-    //creature rat;
-    //rat.name = "rat";
-    //cout << rat.name << endl;
+    creature carp;
+    carp.name = "carp";
+    carp.danger = 100;
+    cout << carp.name << endl;
+    cout << carp.name << " danger level: " << carp.danger << endl;
     return 0;
 }
