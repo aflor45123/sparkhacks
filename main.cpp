@@ -10,6 +10,7 @@ using namespace std;
 Creature invasives[10];
 vector <Creature> insectVec;
 vector<Creature> plantVec;
+int score;
 
 void instantiate(){   
     // Bugs
