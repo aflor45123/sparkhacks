@@ -9,6 +9,7 @@ class Creature{
     string name;
     int danger;
     int relevance;
+    int bounty;
     string location;
     string flavorText; 
     Creature(){
@@ -17,6 +18,7 @@ class Creature{
         relevance = 0;
         location = "";
         flavorText = "";
+        bounty = 0;
     }
 
     Creature(string n, int d, string loc, string txt){
@@ -25,6 +27,7 @@ class Creature{
         relevance = 0;
         location = loc; 
         flavorText = txt;
+        bounty = (danger + relevance)*1000;
     }
 
     void as_string(){
