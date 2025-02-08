@@ -2,7 +2,6 @@
 #include <iostream> 
 #include <vector> 
 #include "Creature.h"
-#include "creature.h"
 
 using namespace std; 
 
@@ -10,7 +9,7 @@ vector<Creature> invasives;
 
 void instantiate(){
     invasives.push_back(Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant."));
-    invasives.push_back(Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens."))
+    invasives.push_back(Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens."));
 }
 
 void questionaire() {
