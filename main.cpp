@@ -28,14 +28,17 @@ void instantiate(){
     invasives[9] = Creature("Garlic Mustard", 100, "Midwest", "A silent invader of the forest floor, garlic mustard spreads ruthlessly, releasing chemicals that poison the soil and suppress native plant life.");
 }
 
-
+// AI collects information from user to best suit their interests
 void questionaire() {
     vector<string> questions = {"Do you garden or farm?", "Do you spend time by the water?", 
-        "Do you spend time by the forest?", "Are you a morning person or a night person?",
-        "Are you okay with touching/killing bugs?", "Are you okay with touching/kill fish?"};
+        "Do you spend time by the forest?", "Are you okay with touching/killing bugs?", 
+        "Are you okay with touching/kill plants?"};
     vector<char> responses;
 
+    vector<string> prioritySpec;
 
+
+    // This for loop asks questions
     for (int i = 0; i < questions.size(); ++i) {
         char answer;
 
@@ -46,12 +49,70 @@ void questionaire() {
         responses.push_back(answer);
     }
 
-    for (int i = 0; i < questions.size(); ++i) {
-        cout << responses.at(i) << " ";
+
+    // This for loop organizes the relevance of each species
+    for (int i = 0; i < responses.size(); ++i) {
+        if (i == 0) {
+            if (responses.at(i) == 'y') {
+                invasives[0].relevance += 2;
+                invasives[1].relevance += 2;
+                invasives[5].relevance += 2;
+                invasives[6].relevance += 2;
+            }
+            else {
+                continue;
+            }
+        }
+        if (i == 1) {
+            if (responses.at(i) == 'y') {
+                invasives[4].relevance += 2;
+            }
+            else {
+                continue;
+            }
+            
+        }
+        if (i == 2) {
+            if (responses.at(i) == 'y') {
+                invasives[0].relevance += 2;
+                invasives[2].relevance += 2;
+                invasives[3].relevance += 2;
+                invasives[6].relevance += 2;
+                invasives[7].relevance += 2;
+                invasives[9].relevance += 2;
+            }
+            else {
+                continue;
+            }
+        }
+        if (i == 3) {
+            if (responses.at(i) == 'y') {
+                invasives[0].relevance += 2;
+                invasives[1].relevance += 2;
+                invasives[2].relevance += 2;
+                invasives[3].relevance += 2;
+                invasives[4].relevance += 2;
+            }
+            else {
+                continue;
+            }
+        }
+        if (i == 4) {
+            if (responses.at(i) == 'y') {
+                invasives[5].relevance += 2;
+                invasives[6].relevance += 2;
+                invasives[7].relevance += 2;
+                invasives[8].relevance += 2;
+                invasives[9].relevance += 2;
+            }
+            else {
+                continue;
+            }
+        }
+    } 
+    for (int i = 0; i < 10; ++i) {
+        cout << invasives[i].name << ": " << invasives[i].relevance << endl;
     }
-
-    
-
 }
 
 int main(){
@@ -61,14 +122,9 @@ int main(){
     cout << "the invasive species that you would like to exterminate :)" << endl;
     
     questionaire();
+
     int bestRelvance = 0;
     int bestMatch;
-    for(int i = 0; i < 10; i++){
-        if(bestRelvance<invasives[i].relevance){
-            bestRelvance = invasives[i].relevance;
-            bestMatch = i;
-        }
-    }
-    invasives[bestMatch].as_string();
-    return 0;
+
+    
 }
