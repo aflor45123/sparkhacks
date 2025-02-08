@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <iostream> 
+#include "creature.h"
+
 using namespace std; 
 
 void questionaire() {
