@@ -8,10 +8,20 @@ using namespace std;
 
 Creature invasives[10];
 
-void instantiate(){
-    invasives.push_back(Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant."));
-    invasives.push_back(Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens."));
-    
+void instantiate(){   
+    // Bugs
+    invasives[0] = Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family covering fields with lacy white blooms while quietly outcompeting native plants and altering prairie ecosystems. ");
+    invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens.");
+    invasives[2] = Creature("Spongy Moth", 100, "Midwest", "A relentless defoliator, the spongy moth’s caterpillars swarm trees like a plague, leaving behind skeletal forests and ecological chaos.");
+    invasives[3] = Creature("Pine Shoot Beetle", 100, "Midwest", "A silent invader of pines, the pine shoot beetle tunnels into young shoots, stunting growth and weakening forests from the inside out.");
+    invasives[4] = Creature("", 100, "", "");
+
+    // Plants
+    invasives[5] = Creature("", 100, "", "");
+    invasives[6] = Creature("", 100, "", "");
+    invasives[7] = Creature("", 100, "", "");
+    invasives[8] = Creature("", 100, "", "");
+    invasives[9] = Creature("", 100, "", "");
 }
 
 void questionaire() {
