@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string> 
 #include <vector>
-#include "Creature.h"
 #include "Leaderboard.h"
 
 
@@ -11,6 +10,7 @@ using namespace std;
 Creature invasives[10];
 vector <Creature> insectVec;
 vector<Creature> plantVec;
+int score;
 
 void instantiate(){   
     // Bugs
@@ -138,8 +138,8 @@ void quiz() {
     }
 
     // Question
-    for (int b = 0; b < topSpecies.size(); ++b) {
-        cout << "What is the proper way to exterminate the " << topSpecies.at(i) << endl;
+    for (int i = 0; i < topSpecies.size(); ++i) {
+        cout << "What is the proper way to exterminate the " << topSpecies.at(i).name << endl;
     }
     
     
