@@ -11,6 +11,7 @@ Creature invasives[10];
 void instantiate(){
     invasives.push_back(Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant."));
     invasives.push_back(Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens."));
+    
 }
 
 void questionaire() {
@@ -29,12 +30,18 @@ void questionaire() {
 
         responses.push_back(answer);
     }
+
+    for (int i = 0; i < questions.size(); ++i) {
+        cout << responses.at(i) << " ";
+    }
+
+    
+
 }
 
 int main(){
     instantiate();
-    //cout << "Welcome, I'm Andromeda, I will assist you in choosing ";
-    //cout << "the invasive species that you would like to exterminate :)" << endl;
+
     cout << "Welcome, I'm Andromeda, I will assist you in choosing ";
     cout << "the invasive species that you would like to exterminate :)" << endl;
     
@@ -48,6 +55,5 @@ int main(){
         }
     }
     invasives[bestMatch].as_string();
-    invasives[0].as_string();
     return 0;
 }
