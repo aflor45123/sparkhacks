@@ -4,6 +4,7 @@
 #include <vector>
 #include "Creature.h"
 
+
 using namespace std; 
 
 Creature invasives[10];
@@ -16,7 +17,7 @@ void instantiate(){
 void questionaire() {
     vector<string> questions = {"Do you garden or farm?", "Do you spend time by the water?", 
         "Do you spend time by the forest?", "Are you a morning person or a night person?",
-        "Are you okay with touching/killing bugs?", "Are you okay with touching/kill fish?"};
+        "Are you okay with touching/killing bugs?"};
     vector<char> responses;
 
 
@@ -32,6 +33,7 @@ void questionaire() {
 }
 
 int main(){
+    system("Rickroll.jpg");
     instantiate();
 
     //cout << "Welcome, I'm Andromeda, I will assist you in choosing ";
@@ -40,6 +42,7 @@ int main(){
     cout << "the invasive species that you would like to exterminate :)" << endl;
     
     questionaire();
+
     int bestRelvance = 0;
     int bestMatch;
     for(int i = 0; i < 10; i++){
