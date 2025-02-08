@@ -1,12 +1,17 @@
 #include <stdlib.h>
 #include <iostream> 
+#include <vector> 
 #include "Creature.h"
 
 using namespace std; 
 
-Creature invasives[10];
-invasives[0] = Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant.");
-invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens.");
+vector<Creature> invasives;
+
+//invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens.");
+void instantiate(){
+    Creature c = Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant.");
+    invasives.push_back(c);
+}
 
 void questionaire() {
     cout << "Do you garden or farm?" << endl;
@@ -25,6 +30,7 @@ void questionaire() {
 }
 
 int main(){
+    instantiate();
     //cout << "Welcome, I'm Andromeda, I will assist you in choosing ";
     //cout << "the invasive species that you would like to exterminate :)" << endl;
     
