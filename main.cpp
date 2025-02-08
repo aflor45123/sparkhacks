@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string> 
 #include <vector>
-#include "Creature.h"
 #include "Leaderboard.h"
 
 
@@ -110,8 +109,25 @@ void questionaire() {
             }
         }
     } 
+    
     for (int i = 0; i < 10; ++i) {
         cout << invasives[i].name << ": " << invasives[i].relevance << endl;
+    }
+
+    // This for loop finds the max value for relevance
+    int max = 0;
+    for (int i = 0; i < 10; ++i) {
+        if (invasives[i].relevance > max) {
+            max = invasives[i].relevance;
+        }
+    }
+
+    vector<Creature> topSpecies;
+    // This for loop appends top species to new vector
+    for (int i = 0; i < 10; ++i) {
+        if (invasives[i].relevance == max) {
+            topSpecies.push_back(invasives[i]);
+        }
     }
 
     
