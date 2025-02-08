@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <string> 
-#include <vector>
-#include "Creature.h"
+#include <vector> 
 #include "Leaderboard.h"
 
 
@@ -11,21 +10,22 @@ using namespace std;
 Creature invasives[10];
 vector <Creature> insectVec;
 vector<Creature> plantVec;
+int score;
 
 void instantiate(){   
     // Bugs
-    invasives[0] = Creature("Emerald Ash Borer", 100, "Midwest", "A glittering green menace, the Emerald Ash Borer burrows beneath bark, silently hollowing out ash trees until they stand as lifeless husks in its wake.", "Exterminate by crushing");
-    invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A stealthy garden menace, the tomato hornworm camouflages itself among leaves, voraciously devouring tomato plants until only skeletal vines remain.", "Feed to animals");
-    invasives[2] = Creature("Spongy Moth", 100, "Midwest", "A relentless defoliator, the spongy moth's caterpillars swarm trees like a plague, leaving behind skeletal forests and ecological chaos.", "Exterminate by crushing");
-    invasives[3] = Creature("Pine Shoot Beetle", 100, "Midwest", "A silent invader of pines, the pine shoot beetle tunnels into young shoots, stunting growth and weakening forests from the inside out.", "Exterminate by crushing");
-    invasives[4] = Creature("Chinese Mystery Snail", 75, "Midwest Lake, Ponds, Rivers", "A slow-moving invader with a hardy shell, clogs waterways, outcompetes native mollusks, and silently alters aquatic food webs.", "Feed to animals");
+    invasives[0] = Creature("Emerald Ash Borer", 100, "Midwest", "A glittering green menace, the Emerald Ash Borer burrows beneath bark, silently hollowing out ash trees until they stand as lifeless husks in its wake.");
+    invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A stealthy garden menace, the tomato hornworm camouflages itself among leaves, voraciously devouring tomato plants until only skeletal vines remain.");
+    invasives[2] = Creature("Spongy Moth", 100, "Midwest", "A relentless defoliator, the spongy moth’s caterpillars swarm trees like a plague, leaving behind skeletal forests and ecological chaos.");
+    invasives[3] = Creature("Pine Shoot Beetle", 100, "Midwest", "A silent invader of pines, the pine shoot beetle tunnels into young shoots, stunting growth and weakening forests from the inside out.");
+    invasives[4] = Creature("Chinese Mystery Snail", 75, "Midwest Lake, Ponds, Rivers", "A slow-moving invader with a hardy shell, clogs waterways, outcompetes native mollusks, and silently alters aquatic food webs.");
 
     // Plants
-    invasives[5] = Creature("Queen Anne's Lace", 100, "Midwest", "A member that overs fields with lacy white blooms while quietly outcompeting native plants and altering prairie ecosystems.", "Composting");
-    invasives[6] = Creature("Bush Honeysuckle", 75, "Midwest Forests, Parks", " With its sweet-scented flowers and dense thickets, bush honeysuckle deceives the landscape, suffocating native plants while casting forests into perpetual shadow.", "Composting");
-    invasives[7] = Creature("Buckthorn", 100, "Midwest", "A ruthless conqueror of woodlands, buckthorn forms impenetrable thickets, choking out native plants and leaving behind a barren, lifeless understory.", "Composting");
-    invasives[8] = Creature("Common Ragweed", 100, "Midwest", "A noxious weed with an encompassing reach, causing significant crop loss if left unchecked and is infamous for the allergic reactions it causes.", "Plucking");
-    invasives[9] = Creature("Garlic Mustard", 100, "Midwest", "A silent invader of the forest floor, garlic mustard spreads ruthlessly, releasing chemicals that poison the soil and suppress native plant life.", "Plucking");
+    invasives[5] = Creature("Queen Anne's Lace", 100, "Midwest", "A member that overs fields with lacy white blooms while quietly outcompeting native plants and altering prairie ecosystems.");
+    invasives[6] = Creature("Bush Honeysuckle", 75, "Midwest Forests, Parks", " With its sweet-scented flowers and dense thickets, bush honeysuckle deceives the landscape, suffocating native plants while casting forests into perpetual shadow.");
+    invasives[7] = Creature("Buckthorn", 100, "Midwest", "A ruthless conqueror of woodlands, buckthorn forms impenetrable thickets, choking out native plants and leaving behind a barren, lifeless understory.");
+    invasives[8] = Creature("Common Ragweed", 100, "Midwest", "A noxious weed with an encompassing reach, causing significant crop loss if left unchecked and is infamous for the allergic reactions it causes.");
+    invasives[9] = Creature("Garlic Mustard", 100, "Midwest", "A silent invader of the forest floor, garlic mustard spreads ruthlessly, releasing chemicals that poison the soil and suppress native plant life.");
 }
 
 // AI collects information from user to best suit their interests
@@ -36,7 +36,7 @@ void questionaire() {
     vector<char> responses;
 
     vector<string> prioritySpec;
-    
+
 
     // This for loop asks questions
     for (int i = 0; i < questions.size(); ++i) {
@@ -50,7 +50,8 @@ void questionaire() {
     }
 
 
-    // This for loop organizes the relevance of each species
+    // This for loop adds points to a species relevance based on
+    // previous responses
     for (int i = 0; i < responses.size(); ++i) {
         if (i == 0) {
             if (responses.at(i) == 'y') {
@@ -113,8 +114,9 @@ void questionaire() {
     for (int i = 0; i < 10; ++i) {
         cout << invasives[i].name << ": " << invasives[i].relevance << endl;
     }
-}
 
+    
+}
 
 int main(){
     instantiate();
@@ -123,6 +125,16 @@ int main(){
     cout << "the invasive species that you would like to exterminate :)" << endl;
     
     questionaire();
+     for(int i =0; i<5; i++){
+    insectVec.push_back(invasives[i]);
+    plantVec.push_back(invasives[i+5]);
+    }
+    Leaderboard plantBoard(plantVec);
+    Leaderboard insectBoard(insectVec);
+    plantBoard.displayLeaderboard();
+    insectBoard.displayLeaderboard();
+
+  
 
     int bestRelvance = 0;
     int bestMatch;
