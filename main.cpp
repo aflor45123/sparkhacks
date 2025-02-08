@@ -9,8 +9,6 @@ using namespace std;
 Creature invasives[10];
 
 void instantiate(){
-    invasives.push_back(Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant."));
-    invasives.push_back(Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens."));
     invasives[0] = Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant.");
     invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens.");
 }
