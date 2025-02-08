@@ -1,5 +1,8 @@
+#include <stdlib.h>
+#include <iostream> 
+using namespace std; 
 
-main(){
-    //system("Rickroll.jpg"); 
+int main(){
+    cout << "this works!!!"<< endl;
     return 0;
 }
