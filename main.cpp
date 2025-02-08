@@ -2,6 +2,7 @@
 #include <iostream> 
 #include <vector> 
 #include "Creature.h"
+#include "creature.h"
 
 using namespace std; 
 
@@ -15,15 +16,6 @@ void instantiate(){
 
 void questionaire() {
     cout << "Do you garden or farm?" << endl;
-    cout << "   1: yes  2: no   " << endl;
-    char in;
-    cin >> in; 
-    if(in == '1'){
-        invasives[1].relevance++;
-    }
-    if(in == '2'){
-
-    }
 
     cout << "Do you spend time by the water?" << endl;
 
@@ -33,8 +25,8 @@ int main(){
     instantiate();
     //cout << "Welcome, I'm Andromeda, I will assist you in choosing ";
     //cout << "the invasive species that you would like to exterminate :)" << endl;
-    
-    //cout << questionaire() << endl;
+    cout << "Welcome, I'm Andromeda, I will assist you in choosing ";
+    cout << "the invasive species that you would like to exterminate :)" << endl;
     int bestRelvance = 0;
     int bestMatch;
     for(int i = 0; i < 10; i++){
@@ -44,5 +36,6 @@ int main(){
         }
     }
     invasives[bestMatch].as_string();
+    //cout << questionaire() << endl;
     return 0;
 }
