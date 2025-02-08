@@ -3,10 +3,14 @@
 #include <string> 
 #include <vector>
 #include "Creature.h"
+#include "Leaderboard.h"
+
 
 using namespace std; 
 
 Creature invasives[10];
+vector <Creature> insectVec;
+vector<Creature> plantVec;
 
 void instantiate(){   
     // Bugs
