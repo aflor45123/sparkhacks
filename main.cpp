@@ -1,3 +1,5 @@
-//works?
-//tester?
-//oof
+
+main(){
+    //system("Rickroll.jpg"); 
+    return 0;
+}
