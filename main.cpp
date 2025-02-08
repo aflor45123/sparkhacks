@@ -64,7 +64,6 @@ void questionaire() {
 }
 
 int main(){
-    system("Rickroll.jpg");
     instantiate();
 
     cout << "Welcome, I'm Andromeda. I will assist you in choosing ";
