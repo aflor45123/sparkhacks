@@ -8,10 +8,9 @@ using namespace std;
 
 vector<Creature> invasives;
 
-//invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens.");
 void instantiate(){
-    Creature c = Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant.");
-    invasives.push_back(c);
+    invasives.push_back(Creature("Queen Anne's Lace", 100, "Midwest", "A member of the carrot family original brought to America as a garden plant."));
+    invasives.push_back(Creature("Tomato Worm", 100, "Midwest", "A fleshy blue worm frequently found in gardens."))
 }
 
 void questionaire() {
