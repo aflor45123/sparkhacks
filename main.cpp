@@ -114,7 +114,34 @@ void questionaire() {
     for (int i = 0; i < 10; ++i) {
         cout << invasives[i].name << ": " << invasives[i].relevance << endl;
     }
+}
 
+void quiz() {
+    int max = 0;
+        
+    // This for loops looks for highest max relevance
+    for (int i = 0; i < 10; ++i) {
+        if (invasives[i].relevance > max) {
+            max = invasives[i].relevance;
+        }
+        else {
+            max = max;
+        }
+    }
+
+    // This for loop ranks the top species by relevance and puts them into new vector
+    vector<Creature> topSpecies;
+    for (int i = 0; i < 10; ++i) {
+        if (invasives[i].relevance == max) {
+            topSpecies.push_back(invasives[i]);
+        }
+    }
+
+    // Question
+    for (int b = 0; b < topSpecies.size(); ++b) {
+        cout << "What is the proper way to exterminate the " << topSpecies.at(i) << endl;
+    }
+    
     
 }
 
@@ -134,10 +161,5 @@ int main(){
     plantBoard.displayLeaderboard();
     insectBoard.displayLeaderboard();
 
-  
-
-    int bestRelvance = 0;
-    int bestMatch;
-
-    
+    quiz();
 }
