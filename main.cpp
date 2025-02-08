@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <iostream> 
-#include "creature.h"
+#include "Creature.h"
 
 using namespace std; 
 
@@ -16,10 +16,9 @@ int main(){
     cout << "the invasive species that you would like to exterminate :)" << endl;
     
     //cout << questionaire() << endl;
-    creature carp;
-    carp.name = "carp";
-    carp.danger = 100;
-    cout << carp.name << endl;
-    cout << carp.name << " danger level: " << carp.danger << endl;
+    Creature invasives[10];
+    Creature lace("Queen Anne's Lace", 100, "Midwest", "text");
+    invasives[0] = lace;
+    invasives[0].as_string();
     return 0;
 }
