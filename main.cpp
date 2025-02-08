@@ -16,5 +16,10 @@ int main(){
     cout << "the invasive species that you would like to exterminate :)" << endl;
     
     //cout << questionaire() << endl;
+    creature carp;
+    carp.name = "carp";
+    carp.danger = 100;
+    cout << carp.name << endl;
+    cout << carp.name << " danger level: " << carp.danger << endl;
     return 0;
 }
