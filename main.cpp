@@ -113,6 +113,7 @@ void questionaire() {
     for (int i = 0; i < 10; ++i) {
         cout << invasives[i].name << ": " << invasives[i].relevance << endl;
     }
+    
 }
 
 int main(){
@@ -122,6 +123,16 @@ int main(){
     cout << "the invasive species that you would like to exterminate :)" << endl;
     
     questionaire();
+     for(int i =0; i<5; i++){
+    insectVec.push_back(invasives[i]);
+    plantVec.push_back(invasives[i+5]);
+    }
+    Leaderboard plantBoard(plantVec);
+    Leaderboard insectBoard(insectVec);
+    plantBoard.displayLeaderboard();
+    insectBoard.displayLeaderboard();
+
+  
 
     int bestRelvance = 0;
     int bestMatch;

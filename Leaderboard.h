@@ -16,13 +16,13 @@ class Leaderboard{
         }
     
     }
-    bool compareBounty(Creature a, Creature b){
-        return(a.bounty<b.bounty);
+    static bool compareBounty(Creature a, Creature b){
+        return(a.bounty > b.bounty);
     }
 
     
     Leaderboard(vector<Creature> creatures){
-        sort(creatures.begin(), creatures.end(), compareBounty);
+        sort(creatures.begin(), creatures.end(),compareBounty);
         rankedLeaderBoard = creatures;
     }
    
