@@ -50,7 +50,8 @@ void questionaire() {
     }
 
 
-    // This for loop organizes the relevance of each species
+    // This for loop adds points to a species relevance based on
+    // previous responses
     for (int i = 0; i < responses.size(); ++i) {
         if (i == 0) {
             if (responses.at(i) == 'y') {
@@ -113,6 +114,7 @@ void questionaire() {
     for (int i = 0; i < 10; ++i) {
         cout << invasives[i].name << ": " << invasives[i].relevance << endl;
     }
+
 }
 
 int main(){
