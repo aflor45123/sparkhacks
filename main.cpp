@@ -14,7 +14,7 @@ void instantiate(){
     invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A stealthy garden menace, the tomato hornworm camouflages itself among leaves, voraciously devouring tomato plants until only skeletal vines remain.");
     invasives[2] = Creature("Spongy Moth", 100, "Midwest", "A relentless defoliator, the spongy moth’s caterpillars swarm trees like a plague, leaving behind skeletal forests and ecological chaos.");
     invasives[3] = Creature("Pine Shoot Beetle", 100, "Midwest", "A silent invader of pines, the pine shoot beetle tunnels into young shoots, stunting growth and weakening forests from the inside out.");
-    invasives[4] = Creature("Midwest", 75, "Midwest Lake, Ponds, Rivers", "A slow-moving invader with a hardy shell, clogs waterways, outcompetes native mollusks, and silently alters aquatic food webs.");
+    invasives[4] = Creature("Chinese Mystery Snail", 75, "Midwest Lake, Ponds, Rivers", "A slow-moving invader with a hardy shell, clogs waterways, outcompetes native mollusks, and silently alters aquatic food webs.");
 
     // Plants
     invasives[5] = Creature("Queen Anne's Lace", 100, "Midwest", "A member that overs fields with lacy white blooms while quietly outcompeting native plants and altering prairie ecosystems.");
