@@ -8,7 +8,7 @@ using namespace std;
 
 Creature invasives[10];
 
-void instantiate(){
+void instantiate(){   
     // Bugs
     invasives[0] = Creature("Sea Lamprey", 100, "Midwest in the Great Lakes", "A living nightmare of the deep, the sea lamprey latches onto fish with its circular maw, draining life with its vampiric grip and leaving devastation in its wake.");
     invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A stealthy garden menace, the tomato hornworm camouflages itself among leaves, voraciously devouring tomato plants until only skeletal vines remain.");
@@ -40,13 +40,18 @@ void questionaire() {
 
         responses.push_back(answer);
     }
+
+    for (int i = 0; i < questions.size(); ++i) {
+        cout << responses.at(i) << " ";
+    }
+
+    
+
 }
 
 int main(){
     instantiate();
 
-    //cout << "Welcome, I'm Andromeda, I will assist you in choosing ";
-    //cout << "the invasive species that you would like to exterminate :)" << endl;
     cout << "Welcome, I'm Andromeda, I will assist you in choosing ";
     cout << "the invasive species that you would like to exterminate :)" << endl;
     
