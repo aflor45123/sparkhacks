@@ -3,10 +3,12 @@
 #include <string> 
 #include <vector>
 #include "Creature.h"
-
+#include "Leaderboard.h"
 using namespace std; 
 
 Creature invasives[10];
+vector <Creature> insectVec;
+vector<Creature> plantVec;
 
 void instantiate(){   
     // Bugs
@@ -22,6 +24,16 @@ void instantiate(){
     invasives[7] = Creature("Buckthorn", 100, "Midwest", "A ruthless conqueror of woodlands, buckthorn forms impenetrable thickets, choking out native plants and leaving behind a barren, lifeless understory.");
     invasives[8] = Creature("Emerald Ash Borer", 100, "Midwest Forests, Parks", " A glittering green menace, the Emerald Ash Borer burrows beneath bark, silently hollowing out ash trees until they stand as lifeless husks in its wake.");
     invasives[9] = Creature("Garlic Mustard", 100, "Midwest", "A silent invader of the forest floor, garlic mustard spreads ruthlessly, releasing chemicals that poison the soil and suppress native plant life.");
+
+    for(int i = 0; i<5; i++){
+        insectVec.push_back(invasives[i]);
+        plantVec.push_back(invasives[i+5]);
+    }
+    Leaderboard plantLeaderboard(plantVec);
+    Leaderboard insectLeaderboard(insectVec);
+
+
+
 }
 
 void questionaire() {
