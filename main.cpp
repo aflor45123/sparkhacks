@@ -3,10 +3,14 @@
 #include <string> 
 #include <vector>
 #include "Creature.h"
+#include "Leaderboard.h"
+
 
 using namespace std; 
 
 Creature invasives[10];
+vector <Creature> insectVec;
+vector<Creature> plantVec;
 
 void instantiate(){   
     // Bugs
@@ -23,6 +27,7 @@ void instantiate(){
     invasives[8] = Creature("Common Ragweed", 100, "Midwest", "A noxious weed with an encompassing reach, causing significant crop loss if left unchecked and is infamous for the allergic reactions it causes.");
     invasives[9] = Creature("Garlic Mustard", 100, "Midwest", "A silent invader of the forest floor, garlic mustard spreads ruthlessly, releasing chemicals that poison the soil and suppress native plant life.");
 }
+
 
 void questionaire() {
     vector<string> questions = {"Do you garden or farm?", "Do you spend time by the water?", 
