@@ -133,6 +133,7 @@ void questionaire() {
     cout << endl;
     cout << "Results: " << endl;
 
+    // Prints out top species
     for (int i = 0; i < topSpecies.size(); ++i) {
         cout << topSpecies.at(i).name << endl;
     }
