@@ -109,10 +109,6 @@ void questionaire() {
             }
         }
     } 
-    
-    for (int i = 0; i < 10; ++i) {
-        cout << invasives[i].name << ": " << invasives[i].relevance << endl;
-    }
 
     // This for loop finds the max value for relevance
     int max = 0;
@@ -130,6 +126,21 @@ void questionaire() {
         }
     }
 
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    cout << "Here are the top species that you are more likely to encounter in your daily life!" << endl;
+    cout << endl;
+    cout << "Results: " << endl;
+
+    for (int i = 0; i < topSpecies.size(); ++i) {
+        cout << topSpecies.at(i).name << endl;
+    }
+
+    cout << endl;
+    cout << endl;
+    cout << endl;
+
     
 }
 
@@ -139,6 +150,7 @@ int main(){
 
     cout << "Welcome, I'm Andromeda. I will assist you in choosing ";
     cout << "the invasive species that you would like to exterminate :)" << endl;
+    cout << endl;
     
     questionaire();
      for(int i =0; i<5; i++){
@@ -147,7 +159,18 @@ int main(){
     }
     Leaderboard plantBoard(plantVec);
     Leaderboard insectBoard(insectVec);
+
+    cout << "Leaderboards for Invasive Plants: " << endl;
+    cout << endl;
     plantBoard.displayLeaderboard();
+
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    
+    cout << "Leaderboards for Invasive Insects: " << endl;
+    cout << endl;
+
     insectBoard.displayLeaderboard();
 
     
