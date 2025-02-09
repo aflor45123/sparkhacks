@@ -17,7 +17,7 @@ void instantiate(){
     invasives[1] = Creature("Tomato Worm", 100, "Midwest", "A stealthy garden menace, the tomato hornworm camouflages itself among leaves, voraciously devouring tomato plants until only skeletal vines remain.", "Feed to animals");
     invasives[2] = Creature("Spongy Moth", 100, "Midwest", "A relentless defoliator, the spongy moth's caterpillars swarm trees like a plague, leaving behind skeletal forests and ecological chaos.", "Exterminate by crushing");
     invasives[3] = Creature("Pine Shoot Beetle", 100, "Midwest", "A silent invader of pines, the pine shoot beetle tunnels into young shoots, stunting growth and weakening forests from the inside out.", "Exterminate by crushing");
-    invasives[4] = Creature("Chinese Mystery Snail", 75, "Midwest Lake, Ponds, Rivers", "A slow-moving invader with a hardy shell, clogs waterways, outcompetes native mollusks, and silently alters aquatic food webs.", "Feed to animals");
+    invasives[4] = Creature("Chinese Mystery Snail", 75, "Midwest Lake, Ponds, Rivers", "A slow-moving invader with a hardy shell, clogs waterways, outcompetes native mollusks, and silently alters aquatic food webs. Identfyable by its brown and green striped spiral shell. Its calcium rich shell can be used as a calcium supliment for egg laying birds.", "Feed to animals");
 
     // Plants
     invasives[5] = Creature("Queen Anne's Lace", 100, "Midwest", "A member that overs fields with lacy white blooms while quietly outcompeting native plants and altering prairie ecosystems. Identifyable by its cone shaped groupings of little white flowers, and tall stem. ", "Composting");
@@ -109,10 +109,6 @@ void questionaire() {
             }
         }
     } 
-    
-    for (int i = 0; i < 10; ++i) {
-        cout << invasives[i].name << ": " << invasives[i].relevance << endl;
-    }
 
     // This for loop finds the max value for relevance
     int max = 0;
@@ -130,6 +126,21 @@ void questionaire() {
         }
     }
 
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    cout << "Here are the top species that you are more likely to encounter in your daily life!" << endl;
+    cout << endl;
+    cout << "Results: " << endl;
+
+    for (int i = 0; i < topSpecies.size(); ++i) {
+        cout << topSpecies.at(i).name << endl;
+    }
+
+    cout << endl;
+    cout << endl;
+    cout << endl;
+
     
 }
 
@@ -139,6 +150,7 @@ int main(){
 
     cout << "Welcome, I'm Andromeda. I will assist you in choosing ";
     cout << "the invasive species that you would like to exterminate :)" << endl;
+    cout << endl;
     
     questionaire();
      for(int i =0; i<5; i++){
@@ -147,7 +159,18 @@ int main(){
     }
     Leaderboard plantBoard(plantVec);
     Leaderboard insectBoard(insectVec);
+
+    cout << "Leaderboards for Invasive Plants: " << endl;
+    cout << endl;
     plantBoard.displayLeaderboard();
+
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    
+    cout << "Leaderboards for Invasive Insects: " << endl;
+    cout << endl;
+
     insectBoard.displayLeaderboard();
 
     
