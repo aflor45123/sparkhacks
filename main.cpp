@@ -20,11 +20,11 @@ void instantiate(){
     invasives[4] = Creature("Chinese Mystery Snail", 75, "Midwest Lake, Ponds, Rivers", "A slow-moving invader with a hardy shell, clogs waterways, outcompetes native mollusks, and silently alters aquatic food webs.", "Feed to animals");
 
     // Plants
-    invasives[5] = Creature("Queen Anne's Lace", 100, "Midwest", "A member that overs fields with lacy white blooms while quietly outcompeting native plants and altering prairie ecosystems.", "Composting");
+    invasives[5] = Creature("Queen Anne's Lace", 100, "Midwest", "A member that overs fields with lacy white blooms while quietly outcompeting native plants and altering prairie ecosystems. Identifyable by its cone shaped groupings of little white flowers, and tall stem. ", "Composting");
     invasives[6] = Creature("Bush Honeysuckle", 75, "Midwest Forests, Parks", " With its sweet-scented flowers and dense thickets, bush honeysuckle deceives the landscape, suffocating native plants while casting forests into perpetual shadow.", "Composting");
     invasives[7] = Creature("Buckthorn", 100, "Midwest", "A ruthless conqueror of woodlands, buckthorn forms impenetrable thickets, choking out native plants and leaving behind a barren, lifeless understory.", "Composting");
     invasives[8] = Creature("Common Ragweed", 100, "Midwest", "A noxious weed with an encompassing reach, causing significant crop loss if left unchecked and is infamous for the allergic reactions it causes.", "Plucking");
-    invasives[9] = Creature("Garlic Mustard", 100, "Midwest", "A silent invader of the forest floor, garlic mustard spreads ruthlessly, releasing chemicals that poison the soil and suppress native plant life.", "Plucking");
+    invasives[9] = Creature("Garlic Mustard", 100, "Midwest", "A silent invader of the forest floor, garlic mustard spreads ruthlessly, releasing chemicals that poison the soil and suppress native plant life. Identiable by its namesake smell of garlic and mustard.", "Plucking");
 }
 
 // AI collects information from user to best suit their interests
